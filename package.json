@@ -1,0 +1,17 @@
+{
+  "name": "app-client-seed",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Client application seed project",
+  "repository": "https://github.com/Mortenagoda/app-client-seed.git",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "devDependencies": {
+    "gulp": "3.9.1",
+	"gript": "^0.0.12"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update"
+  }
+}

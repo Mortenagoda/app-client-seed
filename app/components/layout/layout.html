@@ -1,0 +1,25 @@
+<md-toolbar flex="none">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Menu" ng-click="$ctrl.toggleSidenav();">
+            <md-icon md-svg-icon="img/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+            <span>{{::$ctrl.title}}</span>
+        </h2>
+        <span flex></span>
+    </div>
+</md-toolbar>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left-sidenav">
+    <md-toolbar>
+        <h1 class="md-toolbar-tools" ng-click="$ctrl.toggleSidenav();">Menu</h1>
+    </md-toolbar>
+    <md-content layout-padding layout="column">
+        <md-button ng-repeat="link in $ctrl.menuLinks" ng-href="{{link.url}}" ng-click="$ctrl.toggleSidenav();" flex>{{link.label}}</md-button>
+    </md-content>
+</md-sidenav>
+<md-content layout="column" flex>
+    <ng-transclude flex></ng-transclude>
+    <div class="copyright" layout="row" layout-padding flex="none">
+        <div>Powered by Morten A ©2016-{{$ctrl.currentDate | date:'yyyy'}}</div>
+    </div>
+</md-content>
